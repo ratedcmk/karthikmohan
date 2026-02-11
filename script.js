@@ -90,4 +90,32 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(style);
 
     animateOnScroll();
+
+    // --- Contact Form Handling ---
+    const contactForm = document.querySelector('.contact-form');
+    const hiddenIframe = document.querySelector('#hidden_iframe');
+    const successMessage = document.querySelector('#form-success-message');
+    const submitBtn = contactForm ? contactForm.querySelector('button[type="submit"]') : null;
+
+    if (contactForm && hiddenIframe && successMessage && submitBtn) {
+        let isSubmitting = false;
+
+        contactForm.addEventListener('submit', () => {
+            isSubmitting = true;
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Sending...';
+            submitBtn.style.opacity = '0.7';
+            submitBtn.style.cursor = 'not-allowed';
+        });
+
+        hiddenIframe.addEventListener('load', () => {
+            if (isSubmitting) {
+                contactForm.style.display = 'none';
+                successMessage.style.display = 'block';
+                // Optional: Reset form for next time if needed, though form is hidden now
+                contactForm.reset();
+                isSubmitting = false;
+            }
+        });
+    }
 });
