@@ -94,11 +94,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Contact Form Handling ---
     const contactForm = document.querySelector('.contact-form');
     const hiddenIframe = document.querySelector('#hidden_iframe');
-    const successMessage = document.querySelector('#form-success-message');
+    const successModal = document.querySelector('#success-modal');
+    const closeModalBtn = document.querySelector('#close-modal-btn');
     const submitBtn = contactForm ? contactForm.querySelector('button[type="submit"]') : null;
 
-    if (contactForm && hiddenIframe && successMessage && submitBtn) {
+    if (contactForm && hiddenIframe && successModal && closeModalBtn && submitBtn) {
         let isSubmitting = false;
+
+        // Function to close modal
+        const closeModal = () => {
+            successModal.classList.remove('active');
+            contactForm.reset();
+            submitBtn.disabled = false;
+            submitBtn.innerText = 'Send Message';
+            submitBtn.style.opacity = '1';
+            submitBtn.style.cursor = 'pointer';
+        };
 
         contactForm.addEventListener('submit', () => {
             isSubmitting = true;
@@ -110,11 +121,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         hiddenIframe.addEventListener('load', () => {
             if (isSubmitting) {
-                contactForm.style.display = 'none';
-                successMessage.style.display = 'block';
-                // Optional: Reset form for next time if needed, though form is hidden now
-                contactForm.reset();
+                successModal.classList.add('active');
                 isSubmitting = false;
+            }
+        });
+
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Close when clicking outside the modal content
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                closeModal();
             }
         });
     }
