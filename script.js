@@ -60,7 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Scroll Animations (Fade Up) ---
     const animateOnScroll = () => {
-        const elements = document.querySelectorAll('.hero-content, .section-title, .timeline-item, .expertise-card, .metric-card');
+        // Hero elements are animated via CSS. We animate other sections here.
+        const elements = document.querySelectorAll('.section-title, .timeline-item, .glass-card');
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {

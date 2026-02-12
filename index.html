@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -28,8 +25,7 @@
                 <li><a href="#dashboard">Impact</a></li>
                 <li><a href="#expertise">Expertise</a></li>
                 <li><a href="#career">Career</a></li>
-                <li><a href="#philosophy">Philosophy</a></li>
-                <li><a href="#contact" class="btn-primary-nav">Connect</a></li>
+                <li><a href="#contact" class="btn-nav-cta">Connect</a></li>
             </ul>
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
@@ -39,80 +35,92 @@
 
     <main>
         <section id="hero" class="hero-section">
-            <div class="hero-container">
+            <div class="container hero-container">
                 <div class="hero-content">
-                    <span class="hero-label">Strategic Planning & Performance Management Specialist</span>
-                    <h1 class="hero-title">Driving Growth at <span class="highlight">Xiaomi India</span> through GTM
-                        Strategy, Sales Enablement & Analytics Leadership</h1>
-                    <p class="hero-subtitle">From field sales training to zonal leadership to GTM strategy — building
-                        scalable performance systems in India’s competitive smartphone market.</p>
+                    <span class="hero-badge">Strategic Planning & Performance Management</span>
+                    <h1 class="hero-title">Driving Growth at <span class="highlight">Xiaomi India</span></h1>
+                    <p class="hero-subtitle">Leading GTM Strategy, Sales Enablement & Analytics to build scalable
+                        performance systems in India’s competitive smartphone market.</p>
                     <div class="hero-btns">
                         <a href="#dashboard" class="btn-primary">View My Impact</a>
-                        <a href="#expertise" class="btn-secondary">Explore GTM Expertise</a>
                         <a href="https://drive.google.com/file/d/1jvs1_H3xnpm1Je4BWj1cQox8WcwK5JYp/view?usp=sharing"
-                            target="_blank" class="btn-secondary"><i class="fas fa-file-download"
-                                style="margin-right: 8px;"></i>View Resume</a>
+                            target="_blank" class="btn-secondary"><i class="fas fa-file-download"></i> Download CV</a>
+                    </div>
+                </div>
+                <!-- Professional Hero Image -->
+                <div class="hero-image-container fade-in-up">
+                    <div class="hero-img-wrapper">
+                        <img src="assets/profile.jpg" alt="Karthik Mohan" class="hero-img">
                     </div>
                 </div>
             </div>
-            <div class="hero-bg-overlay"></div>
+            <!-- Background elements handled by CSS -->
         </section>
 
         <section id="summary" class="section">
             <div class="container">
-                <div class="grid-2-col">
-                    <div class="summary-text">
-                        <h2 class="section-title">Executive Summary</h2>
-                        <p class="lead">Strategic planning and performance management specialist with 9+ years at Xiaomi
-                            India.</p>
-                        <p>Expert in GTM strategy, sales enablement, training analytics, and ROI analysis. Proven track
-                            record of increasing user retention by 25% and designing large-scale training programs that
-                            drive measurable business impact.</p>
-                        <p>Skilled in data analysis, performance dashboards, and cross-functional collaboration,
-                            combining field execution experience with analytical decision-making to design high-impact
-                            growth strategies.</p>
-                    </div>
-                    <div class="summary-visual">
-                        <!-- Abstract Data Vis representation -->
-                        <div class="data-vis-circle">
-                            <div class="stat-circle">
-                                <span class="stat-number">9+</span>
-                                <span class="stat-label">Years at Xiaomi</span>
-                            </div>
+                <div class="glass-card">
+                    <div class="grid-2-col"
+                        style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                        <div class="summary-text">
+                            <h2 class="section-title" style="font-size: 2rem; margin-bottom: 20px;">Executive Summary
+                            </h2>
+                            <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                                Strategic planning and performance management specialist with <strong>9+ years at Xiaomi
+                                    India</strong>. Expert in GTM strategy, sales enablement, training analytics, and
+                                ROI
+                                analysis.
+                            </p>
+                            <p style="color: var(--text-secondary);">
+                                Proven track record of increasing user retention by 25% and designing large-scale
+                                training programs that drive measurable business impact. Combining field execution
+                                experience with analytical decision-making.
+                            </p>
+                        </div>
+                        <div class="summary-visual text-center">
+                            <!-- Caricature Image -->
+                            <img src="assets/cartoon.png" alt="Performance Analyst Caricature"
+                                style="max-width: 80%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="dashboard" class="section bg-dark">
+        <section id="dashboard" class="section">
             <div class="container">
                 <h2 class="section-title text-center">Performance Dashboard</h2>
-                <div class="metrics-grid">
-                    <div class="metric-card">
-                        <div class="metric-icon"><i class="fas fa-briefcase"></i></div>
-                        <h3 class="metric-value" data-target="9">0</h3>
-                        <p class="metric-label">Years at Xiaomi India</p>
+                <div class="metrics-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
+                    <!-- Metric 1 -->
+                    <div class="metric-card glass-card" style="text-align: center;">
+                        <div class="metric-icon" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"><i
+                                class="fas fa-briefcase"></i></div>
+                        <h3 class="metric-value" data-target="9" style="font-size: 2.5rem; font-weight: 700;">0</h3>
+                        <p class="metric-label" style="color: var(--text-secondary);">Years at Xiaomi India</p>
                     </div>
-                    <div class="metric-card">
-                        <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
-                        <h3 class="metric-value" data-target="25" data-suffix="%">0%</h3>
-                        <p class="metric-label">Increase in User Retention</p>
+                    <!-- Metric 2 -->
+                    <div class="metric-card glass-card" style="text-align: center;">
+                        <div class="metric-icon" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"><i
+                                class="fas fa-chart-line"></i></div>
+                        <h3 class="metric-value" data-target="25" data-suffix="%"
+                            style="font-size: 2.5rem; font-weight: 700;">0%</h3>
+                        <p class="metric-label" style="color: var(--text-secondary);">Increase in User Retention</p>
                     </div>
-                    <div class="metric-card">
-                        <div class="metric-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                        <h3 class="metric-value" data-target="5">0</h3>
-                        <p class="metric-label">Years Training Leadership</p>
+                    <!-- Metric 3 -->
+                    <div class="metric-card glass-card" style="text-align: center;">
+                        <div class="metric-icon" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"><i
+                                class="fas fa-chalkboard-teacher"></i></div>
+                        <h3 class="metric-value" data-target="5" style="font-size: 2.5rem; font-weight: 700;">0</h3>
+                        <p class="metric-label" style="color: var(--text-secondary);">Years Training Leadership</p>
                     </div>
-                    <div class="metric-card">
-                        <div class="metric-icon"><i class="fas fa-map-marked-alt"></i></div>
-                        <h3 class="metric-value">Zone-Level</h3>
-                        <p class="metric-label">Sales Optimization</p>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-icon"><i class="fas fa-chess-knight"></i></div>
-                        <h3 class="metric-value">End-to-End</h3>
-                        <p class="metric-label">GTM Strategy Ownership</p>
+                    <!-- Metric 4 -->
+                    <div class="metric-card glass-card" style="text-align: center;">
+                        <div class="metric-icon" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"><i
+                                class="fas fa-map-marked-alt"></i></div>
+                        <h3 class="metric-value" style="font-size: 1.8rem; font-weight: 700; padding: 10px 0;">
+                            Zone-Level</h3>
+                        <p class="metric-label" style="color: var(--text-secondary);">Sales Optimization</p>
                     </div>
                 </div>
             </div>
@@ -121,39 +129,51 @@
         <section id="expertise" class="section">
             <div class="container">
                 <h2 class="section-title">Core Expertise</h2>
-                <div class="expertise-grid-layout">
-                    <div class="expertise-card">
+                <div class="expertise-grid">
+                    <div class="expertise-card glass-card">
                         <h3>Strategy & Planning</h3>
                         <ul>
-                            <li>GTM Architecture</li>
-                            <li>Scheme Planning</li>
-                            <li>Trade Marketing</li>
-                            <li>Market Research</li>
+                            <li><span>GTM Architecture</span> <i class="fas fa-check"
+                                    style="color: var(--accent); font-size: 0.8rem;"></i></li>
+                            <li><span>Scheme Planning</span> <i class="fas fa-check"
+                                    style="color: var(--accent); font-size: 0.8rem;"></i></li>
+                            <li><span>Trade Marketing</span> <i class="fas fa-check"
+                                    style="color: var(--accent); font-size: 0.8rem;"></i></li>
+                            <li><span>Market Research</span> <i class="fas fa-check"
+                                    style="color: var(--accent); font-size: 0.8rem;"></i></li>
                         </ul>
                     </div>
-                    <div class="expertise-card">
+                    <div class="expertise-card glass-card">
                         <h3>Performance & Analytics</h3>
                         <ul>
-                            <li>Dashboard Automation (Power BI)</li>
-                            <li>ROI Analysis</li>
-                            <li>KPI Governance</li>
-                            <li>Sales Data Interpretation</li>
+                            <li><span>Dashboard Automation</span> <i class="fas fa-check"
+                                    style="color: var(--accent); font-size: 0.8rem;"></i></li>
+                            <li><span>ROI Analysis</span> <i class="fas fa-check"
+                                    style="color: var(--accent); font-size: 0.8rem;"></i></li>
+                            <li><span>KPI Governance</span> <i class="fas fa-check"
+                                    style="color: var(--accent); font-size: 0.8rem;"></i></li>
+                            <li><span>Sales Interpretation</span> <i class="fas fa-check"
+                                    style="color: var(--accent); font-size: 0.8rem;"></i></li>
                         </ul>
                     </div>
-                    <div class="expertise-card">
+                    <div class="expertise-card glass-card">
                         <h3>Sales Enablement</h3>
                         <ul>
-                            <li>Large-scale Training Programs</li>
-                            <li>Distribution Recovery Framework</li>
-                            <li>Microlearning Implementation</li>
-                            <li>Performance Coaching</li>
+                            <li><span>Large-scale Training</span> <i class="fas fa-check"
+                                    style="color: var(--accent); font-size: 0.8rem;"></i></li>
+                            <li><span>Distribution Recovery</span> <i class="fas fa-check"
+                                    style="color: var(--accent); font-size: 0.8rem;"></i></li>
+                            <li><span>Microlearning</span> <i class="fas fa-check"
+                                    style="color: var(--accent); font-size: 0.8rem;"></i></li>
+                            <li><span>Performance Coaching</span> <i class="fas fa-check"
+                                    style="color: var(--accent); font-size: 0.8rem;"></i></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="career" class="section bg-light">
+        <section id="career" class="section">
             <div class="container">
                 <h2 class="section-title">Career Progression</h2>
                 <div class="timeline">
@@ -179,8 +199,8 @@
                         <div class="timeline-content">
                             <h3>Zonal Training Manager</h3>
                             <h4>Xiaomi India | Bengaluru</h4>
-                            <p><strong>Impact:</strong> Achieved 25% increase in user retention rate and awarded Best
-                                Trainer Q1 2019</p>
+                            <p style="margin-bottom: 10px; color: var(--accent);"><strong>Impact:</strong> Achieved 25%
+                                increase in user retention rate</p>
                             <ul class="timeline-details">
                                 <li>Designed and delivered large-scale training programs for offline sales teams,
                                     improving KPI performance by 30%</li>
@@ -188,8 +208,6 @@
                                     measurable productivity increases</li>
                                 <li>Implemented digital microlearning series, increasing training accessibility for 500+
                                     remote staff members</li>
-                                <li>Utilized training analytics and data-driven insights to optimize program delivery
-                                    and report effectiveness</li>
                             </ul>
                         </div>
                     </div>
@@ -201,29 +219,10 @@
                             <h4>Xiaomi India</h4>
                             <ul class="timeline-details">
                                 <li>Conducted training for 200+ sales associates and developed individualized training
-                                    plans for underperformers</li>
-                                <li>Observed sales encounters and identified training needs, creating customized
-                                    programs for teams and individuals</li>
-                                <li>Developed sales performance evaluation policies and methods ensuring fair and
-                                    consistent assessment</li>
-                                <li>Managed training budgets and met financial objectives while maintaining program
-                                    quality</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Item 4 -->
-                    <div class="timeline-item">
-                        <div class="timeline-date">Jul 2016 – Oct 2018</div>
-                        <div class="timeline-content">
-                            <h3>Mi Fan Club President & Community Moderator</h3>
-                            <h4>Xiaomi India</h4>
-                            <ul class="timeline-details">
-                                <li>Led community engagement initiatives and moderated Mi Community as Super Moderator
-                                    and Device Moderator</li>
-                                <li>Built and managed active user community, driving brand loyalty and product awareness
-                                </li>
-                                <li>Awarded Best Device Team Member for outstanding contributions to community growth
-                                </li>
+                                    plans</li>
+                                <li>Observed sales encounters and identified training needs to create customized
+                                    programs</li>
+                                <li>Developed sales performance evaluation policies ensuring fair assessment</li>
                             </ul>
                         </div>
                     </div>
@@ -231,43 +230,16 @@
             </div>
         </section>
 
-        <section id="education" class="section">
+        <section id="philosophy" class="section text-center">
             <div class="container">
-                <div class="grid-2-col">
-                    <div class="education-block">
-                        <h2 class="section-title">Education</h2>
-                        <div class="edu-item" style="margin-bottom: 20px;">
-                            <h3>Master of Business Administration (MBA)</h3>
-                            <p>Marketing (Jul 2025 – Jul 2027)</p>
-                            <p class="institution">Symbiosis Centre for Distance Learning</p>
-                        </div>
-                        <div class="edu-item">
-                            <h3>Bachelor of Technology (B.Tech)</h3>
-                            <p>Electrical & Electronics Engineering (2013 – 2017)</p>
-                            <p class="institution">Mahatma Gandhi University, Kottayam</p>
-                        </div>
-                    </div>
-                    <div class="cert-block">
-                        <h2 class="section-title">Certifications</h2>
-                        <ul class="cert-list">
-                            <li>Ethical Hacking</li>
-                            <li>AutoCAD Certified User</li>
-                            <li>TUV Rheinland Certified Professional (MEP)</li>
-                            <li>Cricket Analytics</li>
-                            <li>SEO: Link Building</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="philosophy" class="section bg-dark text-center">
-            <div class="container">
-                <div class="philosophy-content">
-                    <i class="fas fa-quote-left quote-icon"></i>
-                    <h2 class="philosophy-title">"Execution Backed by Data Wins Markets"</h2>
-                    <p class="philosophy-text">I believe in structured planning, measurable performance systems, and
-                        continuous capability building to create scalable growth in competitive technology environments.
+                <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
+                    <i class="fas fa-quote-left quote-icon"
+                        style="font-size: 2rem; color: var(--accent); margin-bottom: 20px; opacity: 0.8;"></i>
+                    <h2 class="philosophy-title" style="font-size: 2rem; margin-bottom: 20px;">"Execution Backed by Data
+                        Wins Markets"</h2>
+                    <p class="philosophy-text" style="color: var(--text-secondary); font-size: 1.1rem;">
+                        I believe in structured planning, measurable performance systems, and continuous capability
+                        building to create scalable growth in competitive technology environments.
                     </p>
                 </div>
             </div>
@@ -276,33 +248,27 @@
         <section id="interests" class="section">
             <div class="container">
                 <h2 class="section-title">Personal Interests</h2>
-                <div class="interests-tags">
-                    <span>Data Analysis</span>
-                    <span>Sports Analytics</span>
-                    <span>Technology Experimentation</span>
-                    <span>Systems Thinking</span>
+                <div class="grid-2-col"
+                    style="align-items: center; gap: 40px; display: grid; grid-template-columns: 1fr 1fr;">
+                    <div class="interests-tags" style="justify-content: flex-start;">
+                        <span>Data Analysis</span>
+                        <span>Sports Analytics</span>
+                        <span>Technology Experimentation</span>
+                        <span>Systems Thinking</span>
+                    </div>
+                    <div class="interest-visual text-center">
+                        <img src="assets/hobby.jpg" alt="Sports Fan"
+                            style="max-width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="section contact-section">
             <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <div class="contact-card">
-                            <i class="fab fa-linkedin"></i>
-                            <h3>LinkedIn</h3>
-                            <a href="https://www.linkedin.com/in/karthikmohan94" target="_blank">Connect on LinkedIn</a>
-                        </div>
-                        <div class="contact-card">
-                            <i class="fas fa-envelope"></i>
-                            <h3>Email</h3>
-                            <a href="mailto:karthik_cmk@hotmail.com">karthik_cmk@hotmail.com</a>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-container">
+                <h2 class="section-title text-center">Get In Touch</h2>
+                <div class="contact-container">
+                    <div class="glass-card contact-form-container">
                         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
                         <form class="contact-form"
                             action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdvIsEqXqxHv8LG-ElxwnYRDBIwkwwjY3JGeJgl6fBcjTNY2w/formResponse"
@@ -320,9 +286,18 @@
                                 <textarea id="message" name="entry.982683493" rows="5" placeholder="Your Message"
                                     required></textarea>
                             </div>
-                            <button type="submit" class="btn-primary">Send Message</button>
+                            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">Send
+                                Message</button>
                         </form>
+                    </div>
 
+                    <div class="text-center" style="margin-top: 40px;">
+                        <a href="https://www.linkedin.com/in/karthikmohan94" target="_blank"
+                            style="font-size: 1.5rem; color: var(--text-secondary); margin: 0 10px;"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="mailto:karthik_cmk@hotmail.com"
+                            style="font-size: 1.5rem; color: var(--text-secondary); margin: 0 10px;"><i
+                                class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -332,10 +307,7 @@
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">KM.</div>
-                <p>&copy; 2024 Karthik Mohan. All Rights Reserved.</p>
-            </div>
+            <p>&copy; 2026 Karthik Mohan. All Rights Reserved.</p>
         </div>
     </footer>
 
